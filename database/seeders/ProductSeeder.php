@@ -8,7 +8,7 @@ use app\Models\Product;
 
 class ProductSeeder extends Seeder
 {
-    private $products = {
+    private $products = [
         [
                "title": "Solid Gold Petite Micropave ",
           "price": 168,
@@ -122,7 +122,7 @@ class ProductSeeder extends Seeder
           "category_id": 3,
           "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
         ]
-    }
+    ]
      
     public function run(): void
     {
