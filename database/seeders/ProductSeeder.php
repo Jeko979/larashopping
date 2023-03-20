@@ -126,6 +126,12 @@ class ProductSeeder extends Seeder
      
     public function run(): void
     {
-        //
+        foreach($this->products as $products) 
+        {
+            // insert nel db
+            Product::create([
+                "name" => $products['name']
+            ]);
+        }
     }
 }
