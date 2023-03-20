@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use app\Models\Product;
+use App\Models\Product;
 
 class ProductSeeder extends Seeder
 {
@@ -115,15 +115,19 @@ class ProductSeeder extends Seeder
           "category_id" => 3,
           "image" => "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
         ]
-    ]
+        ];
      
     public function run(): void
     {
-        foreach($this->products as $products) 
+        foreach($this->products as $product) 
         {
             // insert nel db
             Product::create([
-                "name" => $products['name']
+                "title" => $product['title'],
+                "price" => $product['price'],
+                "description" => $product['description'],
+                "category_id" => $product['category_id'],
+                "image" => $product['image']
             ]);
         }
     }
