@@ -8,7 +8,7 @@ use app\Models\Product;
 
 class ProductSeeder extends Seeder
 {
-    "products": {
+    private $products = {
         [
                "title": "Solid Gold Petite Micropave ",
           "price": 168,
